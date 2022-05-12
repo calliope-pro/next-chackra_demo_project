@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  front:
+    build: ./ # (ビルドするdockerfileのフォルダ指定)
+    ports: 
+      - 3000:3000 # 3000を3000につなぐ
+    volumes: 
+    - ./front:/front # frontをfrontにつなぐ
+    working_dir: /front
+    tty: true
+
+
+
